@@ -37,7 +37,7 @@ private item[] prices;
     Double totalCost = calculateDiscounts(itemTally);
 
     // work out delivery charge
-    if (totalCost > 50.0){
+    if (totalCost >= 50.0){
       delivery = 0.00;
     }
 
