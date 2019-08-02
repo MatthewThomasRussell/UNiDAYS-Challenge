@@ -5,16 +5,37 @@ public class challange{
 
 
   public static void main(String []args) {
-    //item[] item = createPrices();
     UnidaysDiscountChallenge example = new UnidaysDiscountChallenge(createPrices());
-    example.AddToBasket("B");
-    example.AddToBasket("B");
-    example.AddToBasket("B");
+
+
+    example.AddToBasket("D");
+    example.AddToBasket("D");
+    example.AddToBasket("D");
+    example.AddToBasket("D");
+    example.AddToBasket("D");
+    example.AddToBasket("D");
+    example.AddToBasket("D");
+    example.AddToBasket("D");
+    example.AddToBasket("D");
+    example.AddToBasket("D");
+    example.AddToBasket("D");
+    example.AddToBasket("D");
+    example.AddToBasket("D");
+    example.AddToBasket("D");
+
+
+
+
     result result = example.CalculateTotalPrice();
     Double totalPrice = result.Total;
     Double deliveryCharge = result.DeliveryCharge;
     Double overallTotal = totalPrice + deliveryCharge;
-    System.out.println(overallTotal);
+    System.out.println("---------------------------------");
+    System.out.format("Total Cost         | £%.2f%n",totalPrice);
+    System.out.format("Delivery Charge    | £%.2f%n",deliveryCharge);
+    System.out.println("---------------------------------");
+    System.out.format("Overall Cost       | £%.2f%n",overallTotal);
+    System.out.println("---------------------------------");
   }
 
   private static item[] createPrices(){

@@ -10,20 +10,12 @@ private item[] prices;
   }
 
   public void AddToBasket(String item){
-    // possibly add error check here
-    //
-
-
-    for (int i = 0; i < prices.length ;i++ ) {
-      //System.out.println(i);
+    for (int i = 0; i < prices.length ;i++ ) { // Take item and get info from pricing array
       if (item.equals(prices[i].Name)){
-      //  System.out.println(i);
         basket.add(prices[i]);
       }
     }
-    //System.out.println(prices);
-    //basket.add(item);
-    System.out.println("Added "+item+" to basket");
+    //System.out.println("Added "+item+" to basket");
   }
 
   public result CalculateTotalPrice(){
@@ -69,9 +61,6 @@ private item[] prices;
           int numOfRegular = quantity%itemTemp.numForDiscount ;
           cost += numOfDiscounts * itemTemp.discountPrice; // multiply the discounted price by the number of discount combos
           cost += numOfRegular * itemTemp.Price; // do the same for the non discounts
-
-        //  System.out.println(test1);
-        //  System.out.println(test2);
         }
       }
 
