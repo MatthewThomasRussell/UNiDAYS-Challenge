@@ -2,22 +2,42 @@ import java.util.ArrayList;
 
 
 public class UnidaysDiscountChallenge{
-ArrayList basket= new ArrayList( );
+private ArrayList<item> basket = new ArrayList<item>();
+private item[] prices;
 
-
-  public void UnidaysDiscountChallenge(){
-    System.out.println("Working"); // impliment this
+  public UnidaysDiscountChallenge(item P[]){
+    prices = P;
   }
 
   public void AddToBasket(String item){
-    basket.add(item);
+    // possibly add error check here
+    //
+
+
+    for (int i = 0; i < prices.length ;i++ ) {
+      //System.out.println(i);
+      if (item.equals(prices[i].Name)){
+      //  System.out.println(i);
+        basket.add(prices[i]);
+      }
+    }
+    //System.out.println(prices);
+    //basket.add(item);
     System.out.println("Added "+item+" to basket");
   }
 
   public result CalculateTotalPrice(){
-  result result = new result(0.01,0.02);
+    Double totalCost = 0.00;
+    Double delivery = 0.00;
+
+    for (int i = 0; i < basket.size() ;i++ ) {
+      item itemTemp = basket.get(i);
+      System.out.println(itemTemp.Name);
+      totalCost += itemTemp.Price;
+    }
 
 
+    result result = new result(totalCost,delivery);
     return result;
   }
 
