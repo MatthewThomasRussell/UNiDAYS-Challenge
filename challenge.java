@@ -8,13 +8,13 @@ public class challenge{
     UnidaysDiscountChallenge example = new UnidaysDiscountChallenge(createPrices());
 
 
-    String itemsString = "DDD";
+    String itemsString = "BBBBBB"; // string of items to add to basket
     char[] chars = new char[itemsString.length()];
     for (int i = 0; i <itemsString.length(); i++) {
      example.AddToBasket(String.valueOf(itemsString.charAt(i)));
    }
 
-
+   
 
     result result = example.CalculateTotalPrice();
     Double totalPrice = result.Total;
