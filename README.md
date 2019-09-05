@@ -11,6 +11,8 @@
 4. Type 'java challenge'
 
 
+
+
 ###### The output will be shown in the terminal / command prompt
 an example is shown below
 
@@ -23,7 +25,7 @@ Overall Cost       | £60.00
 ---------------------------------
 </p> </pre>
 
-
+For testing I have included a string at the top of ‘challenge.java’ called ‘itemsString’ this can changed to test different combinations of items.
 
 ## My Approach
 
