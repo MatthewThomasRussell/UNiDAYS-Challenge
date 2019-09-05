@@ -34,13 +34,13 @@ I found that creating two additional classes ‘item’ and ‘result’ to stor
 The ‘UnidaysDiscountChallenge’ class is where the basket is, prices are stored, discounts are applied and the total cost is calculated. The methods of this class are shown below
 
 - ###### AddTobasket(item)
-Cross references the added item string with the name of each item in the pricing list, 	if there is a match that item is added to the basket.
+  Cross references the added item string with the name of each item in the pricing list, 	if there is a match that item is added to the basket.
 
 - ###### CalculateTotalPrice()
-Creates a tally array the same size as the pricing list then runs through each item in the basket tallying the total of each item.  Once the total of each item is known the discounts can be applied by passing the item tally array into the calculateDiscounts() method. Once the discounts have been calculated the total cost is taken and if above 50 the delivery cost is set to 0.00 if below 50 the delivery cost is 7.00 both of these values are then stored within a result class as public variables and returned.
+  Creates a tally array the same size as the pricing list then runs through each item in the basket tallying the total of each item.  Once the total of each item is known the discounts can be applied by passing the item tally array into the calculateDiscounts() method. Once the discounts have been calculated the total cost is taken and if above 50 the delivery cost is set to 0.00 if below 50 the delivery cost is 7.00 both of these values are then stored within a result class as public variables and returned.
 
 - ###### calculateDiscounts(itemTally)
-if the quantity ordered and the required ordered for a discount are both above 0 the number of times the discount has been achieved and the remainder are calculated and stored separately, then the number of times the discount was achieved is multiplied by the discounted price and the remainder is multiplied by the default price where both of these results are added to the total cost and returned.
+  if the quantity ordered and the required ordered for a discount are both above 0 the number of times the discount has been achieved and the remainder are calculated and stored separately, then the number of times the discount was achieved is multiplied by the discounted price and the remainder is multiplied by the default price where both of these results are added to the total cost and returned.
 
 
 The most daunting problem I was faced with was the actual discount system itself I knew I could have multiple IF statements for each item but that would scale poorly. I spent some time thinking about the issue, trying to decide which class would be best for the decision of if a discount should be applied and where the information for each item should be stored in regards to the discount itself. While reading through the pricing rules I noticed a pattern it was buy a particular amount then the price will change from this I was able change my understanding of the pricing table from:
