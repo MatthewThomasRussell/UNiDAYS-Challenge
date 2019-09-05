@@ -9,14 +9,16 @@ private item[] prices;
     prices = P;
   }
 
+
   public void AddToBasket(String item){
     for (int i = 0; i < prices.length ;i++ ) { // Take item and get info from pricing array
       if (item.equals(prices[i].Name)){
         basket.add(prices[i]);
       }
     }
-    //System.out.println("Added "+item+" to basket");
+
   }
+
 
   public result CalculateTotalPrice(){
 

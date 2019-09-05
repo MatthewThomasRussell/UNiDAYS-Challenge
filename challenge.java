@@ -2,24 +2,28 @@
 
 public class challenge{
 
-
-
   public static void main(String []args) {
     UnidaysDiscountChallenge example = new UnidaysDiscountChallenge(createPrices());
 
-
+    // Use this for testing
     String itemsString = "BBBBBB"; // string of items to add to basket
+
+
+
+    // break up string into individual characters and add them to the basket
     char[] chars = new char[itemsString.length()];
     for (int i = 0; i <itemsString.length(); i++) {
      example.AddToBasket(String.valueOf(itemsString.charAt(i)));
-   }
+    }
 
-   
 
+    // calculate results
     result result = example.CalculateTotalPrice();
     Double totalPrice = result.Total;
     Double deliveryCharge = result.DeliveryCharge;
     Double overallTotal = totalPrice + deliveryCharge;
+
+    // format the result to be displayed in terminal
     System.out.println("---------------------------------");
     System.out.format("Total Cost         | £%.2f%n",totalPrice);
     System.out.format("Delivery Charge    | £%.2f%n",deliveryCharge);
