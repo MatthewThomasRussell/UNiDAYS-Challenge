@@ -27,6 +27,8 @@ Overall Cost       | £60.00
 
 For testing I have included a string at the top of ‘challenge.java’ called ‘itemsString’ this can changed to test different combinations of items.
 
+I have also included Javadoc in the ‘doc’ folder
+
 ## My Approach
 
 The challenge class is just an example of how my other classes may be implemented, I kept functionality in this class purposefully simple and minimal, it shows how the data may be set and formatted but this can be different depending on how my other classes are intended on being used.
