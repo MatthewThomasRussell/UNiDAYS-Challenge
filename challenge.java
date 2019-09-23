@@ -19,8 +19,8 @@ public class challenge{
 
     // calculate results
     result result = example.CalculateTotalPrice();
-    Double totalPrice = result.Total;
-    Double deliveryCharge = result.DeliveryCharge;
+    Double totalPrice = result.getTotal();
+    Double deliveryCharge = result.getDeliveryCharge();
     Double overallTotal = totalPrice + deliveryCharge;
 
     // format the result to be displayed in terminal
