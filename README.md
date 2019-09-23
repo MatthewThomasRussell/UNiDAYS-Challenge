@@ -66,3 +66,8 @@ D	|£7.00 	 |2	 |£7.00
 E	|£5.00 	 |3	 |£10.00
 
 This allowed me to create a single simple method which could iterate trough all of the items in the basket and apply the relevant discounts. To do this I kept a tally of each item as they were added. I then created 2 integer variables for each item one of the total quantity of an item divided by the amount required for a discount the other integer was the remainder of this. I multiplied the discounted integer by the new price, then multiple the remainder by the original cost. Finally, I added both of them to the total cost.
+
+When returning the result I debated using an array to store the cost and delivery charge. However, I opted to use a custom class to store the data for 3 reasons.
+1.	I believe it would be easier for the user to remember getTotalCost() than result[0]
+2.	It should help reduce human error as both the total cost and delivery charge are the same datatype and could be easily mixed up in array with no labelling
+3.	It is more secure as once the result class instance has been set it cannot be changed by the user
