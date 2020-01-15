@@ -11,7 +11,6 @@ public class challenge{
 
 
     // break up string into individual characters and add them to the basket
-    char[] chars = new char[itemsString.length()];
     for (int i = 0; i <itemsString.length(); i++) {
      example.AddToBasket(String.valueOf(itemsString.charAt(i)));
     }
